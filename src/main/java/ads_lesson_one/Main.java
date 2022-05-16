@@ -1,7 +1,7 @@
-package ads;
+package ads_lesson_one;
 
-import ads.solution.*;
-import ads.tools.*;
+import ads_lesson_one.solution.*;
+import ads_lesson_one.tools.*;
 
 class Main {
 

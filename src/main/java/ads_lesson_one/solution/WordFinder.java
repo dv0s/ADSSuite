@@ -1,7 +1,7 @@
 // Frans Spijkerman, Avans Hogeschool 2020
-package ads.solution;
+package ads_lesson_one.solution;
 
-import ads.tools.*;
+import ads_lesson_one.tools.*;
 import java.util.Arrays;
 
 public class WordFinder {

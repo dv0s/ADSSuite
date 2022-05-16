@@ -1,4 +1,4 @@
-package ads.tools;
+package ads_lesson_one.tools;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;

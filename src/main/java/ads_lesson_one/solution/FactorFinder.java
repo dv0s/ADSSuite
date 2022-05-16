@@ -1,7 +1,7 @@
 // Frans Spijkerman, Avans Hogeschool 2022
-package ads.solution;
+package ads_lesson_one.solution;
 
-import ads.tools.*;
+import ads_lesson_one.tools.*;
 
 // sample primes: 10000019, 100000007, 4712020471, 142112242123, 34524689549219 
 // 10000019 * 10000169 = 100001880003211‬
