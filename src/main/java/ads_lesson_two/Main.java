@@ -1,22 +1,33 @@
-package ads_lesson_two;
+// Frans Spijkerman, Avans Hogeschool 2022
+package ads;
 
-import ads_lesson_one.tools.Konsole;
+import ads.tools.Konsole;
+import ads.solution.*;
 
-public class Main {
-    public static void main(String[] args)
-    {
+class Main {
+
+    public static void main(String[] args) {
+
         int choice = -1;
         while (choice != 0) {
-            Konsole.writeLine("0: close the application");
-            Konsole.writeLine("1: find prime factor");
-            Konsole.writeLine("2: find word");
-            choice = Konsole.readInt(0, 2);
+
+            Konsole.writeLine("1: List 1");
+            Konsole.writeLine("2: List 2");
+            Konsole.writeLine("3: List 3");
+            Konsole.writeLine("4: Array of Numbers");
+            choice = Konsole.readInt(0, 4);
 
             switch (choice) {
-                case 0 -> System.out.println("Goodbye.");
-                case 1 -> System.out.println("ADSSuite lesson two, choice 1");
-                case 2 -> System.out.println("ADSSuite lesson two, choice 2");
+                case 1 ->
+                    new CourseList1().run();
+                case 2 ->
+                    new CourseList2().run();
+                case 3 ->
+                    new CourseList3().run();
+                case 4 ->
+                    new NumberTester().run();
             }
         }
     }
+
 }

@@ -1,4 +1,5 @@
-package ads_lesson_two.tools;
+// Frans Spijkerman, Avans Hogeschool 2022
+package ads.tools;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,11 +20,12 @@ public class Konsole {
     }
 
     public static String readLine(String prompt) {
-        if(!prompt.isEmpty())
+        if (!prompt.isEmpty()) {
             writeLine(prompt);
+        }
         return readLine();
     }
-    
+
     public static int readInt(int min, int max) {
         return (int) readLong("", min, min, max);
     }
