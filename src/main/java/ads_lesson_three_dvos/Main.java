@@ -1,7 +1,7 @@
 // Frans Spijkerman, Avans Hogeschool 2022
 package ads_lesson_three_dvos;
 
-import ads.solution.*;
+import ads_lesson_three_dvos.solution.*;
 import ads_lesson_three_dvos.tools.Konsole;
 
 class Main {

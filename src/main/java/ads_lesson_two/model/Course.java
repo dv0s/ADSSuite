@@ -1,5 +1,5 @@
 // Frans Spijkerman, Avans Hogeschool 2022
-package ads.model;
+package ads_lesson_two.model;
 
 import java.util.HashSet;
 

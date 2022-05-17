@@ -1,9 +1,9 @@
 // Frans Spijkerman, Avans Hogeschool 2020
 
-package ads.solution;
+package ads_lesson_two.solution;
 
-import ads.model.Course;
-import ads.model.Student;
+import ads_lesson_two.model.Course;
+import ads_lesson_two.model.Student;
 import ads.tools.Konsole;
 
 public class CourseList2 extends CourseList {
