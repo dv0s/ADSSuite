@@ -14,7 +14,8 @@ class Main {
             Konsole.writeLine("1: List 1");
             Konsole.writeLine("2: List 2");
             Konsole.writeLine("3: List 3");
-            Konsole.writeLine("4: Array of Numbers");
+            Konsole.writeLine("4: Find student");
+            Konsole.writeLine("5: Array of Numbers");
             choice = Konsole.readInt(0, 4);
 
             switch (choice) {
@@ -25,6 +26,8 @@ class Main {
                 case 3 ->
                     new CourseList3().run();
                 case 4 ->
+                        new CourseList4().run();
+                case 5 ->
                     new NumberTester().run();
             }
         }

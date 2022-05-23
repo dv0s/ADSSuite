@@ -22,10 +22,29 @@ public class Course {
         this.studentsOBNumber = new HashMap<>();
     }
 
-    public void addStudent(Student student) { students.add(student); }
+    public void addStudent(Student student) {
+        if(studentsOBNumber.containsKey(student.getNumber()))
+        {
+            Konsole.writeLine("Student " + student.getName() + "With number " + student.getNumber() + " is already enrolled!");
+            return;
+        }
+
+        students.add(student);
+        sortAndSaveByName();
+        sortAndSaveByNumber();
+    }
 
     public boolean hasStudent(Student student) {
         return students.contains(student);
+    }
+
+    public Student findStudent(int number)
+    {
+        if(studentsOBNumber.get(number) != null){
+            return studentsOBNumber.get(number);
+        }
+        // This is cheating...
+        return new Student(-1, "Student not Found", 0);
     }
 
     @Override
@@ -37,38 +56,32 @@ public class Course {
         return out + "\n";
     }
 
-    public void printByName(){
-//        Using List to sort it.
-//        List<Student> studentsOBName = new ArrayList<>(students);
-//        studentsOBName.sort(Comparator.comparing(Student::getName));
-
-//        Using TreeSet
-//        Set<Student> studentsOBName = new TreeSet<Student>(students);
-
+    public void sortAndSaveByName(){
         List<Student> studentsByName = students.stream()
                 .sorted(Comparator.comparing(Student::getName))
                 .toList();
 
-        Konsole.writeLine("Students ordered by name:");
-        studentsByName.forEach(student -> {
-            Konsole.writeLine(student.toString());
-            studentsOBName.put(student.getName(), student);
-        });
-
-        Konsole.writeLine(studentsOBName);
+        studentsByName.forEach(student -> studentsOBName.put(student.getName(), student));
     }
 
-    public void printByNumber(){
+    public void sortAndSaveByNumber(){
         List<Student> studentsByNumber = students.stream()
                 .sorted(Comparator.comparing(Student::getNumber))
                 .toList();
 
-        Konsole.writeLine("Students ordered by number:");
-        studentsByNumber.forEach(student ->{
-                Konsole.writeLine(student.toString());
-                studentsOBNumber.put(student.getNumber(), student);
-        });
+        studentsByNumber.forEach(student -> studentsOBNumber.put(student.getNumber(), student));
+    }
 
+
+    public void printByName(){
+        Konsole.writeLine("Students ordered by name: ");
+        Konsole.writeLine(studentsOBName);
+        Konsole.writeLine();
+    }
+
+    public void printByNumber(){
+        Konsole.writeLine("Students ordered by number: ");
         Konsole.writeLine(studentsOBNumber);
+        Konsole.writeLine();
     }
 }

@@ -15,10 +15,14 @@ public class CourseList1 extends CourseList {
         Student paul = new Student(1202, "Paul Doe", 2019);
         Student george = new Student(1203, "George Doe", 2019);
         Student ringo = new Student(1204, "Ringo Doe", 2019);
+        Student ringo2 = new Student(1204, "Ringo Doe2", 2019);
+        Student ringo3 = new Student(1204, "Ringo Doe3", 2019);
 
         course.addStudent(paul);
         course.addStudent(george);
         course.addStudent(ringo);
+        course.addStudent(ringo2);
+        course.addStudent(ringo3);
 
         Konsole.writeLine(course);
 
