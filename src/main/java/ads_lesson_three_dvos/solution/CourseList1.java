@@ -24,5 +24,8 @@ public class CourseList1 extends CourseList {
 
         checkStudent(john);
         checkStudent(paul);
+
+        course.printByName();
+        course.printByNumber();
     }
 }

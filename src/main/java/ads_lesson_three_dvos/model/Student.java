@@ -22,6 +22,8 @@ public class Student {
         return name;
     }
 
+    public Integer getNumber(){ return number; }
+
     @Override
     public int hashCode() {
         return (name + number + year).hashCode();
